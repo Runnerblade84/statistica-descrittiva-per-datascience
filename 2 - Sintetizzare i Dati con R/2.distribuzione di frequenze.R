@@ -6,9 +6,10 @@ setwd("C:/Users/dejan/Desktop")
 #o manualmente
 
 #leggi i dati
-dati <- read.csv("tonni.csv",sep=";")
+dati <- read.csv("datasets/tonni.csv",sep=";")
 dim(dati)
 N=dim(dati)[1]
+
 
 
 #distribuzione di frequenze
@@ -20,8 +21,8 @@ distr_freq_SESSO
 
 
 #distribuzione di frequenze
-freq_ass <- table(dati$LOCALITÀ)
-freq_rel <- table(dati$LOCALITÀ)/N
+freq_ass <- table(dati$LOCALITA)
+freq_rel <- table(dati$LOCALITA)/N
 distr_freq_LOC<-cbind(freq_ass,freq_rel)
 distr_freq_LOC
 
@@ -48,4 +49,4 @@ write.csv(distr_freq_lungh_cl,"lunghezza in classi.csv")
 
 
 table(dati$SESSO,lunghezza_cl)
-table(dati$LOCALITÀ,lunghezza_cl)
+table(dati$LOCALITA,lunghezza_cl)
