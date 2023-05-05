@@ -36,4 +36,4 @@ barplot(distr_freq$ni,
         ylim = c(0,10),
         col="blue")
 
-barplot(table(dati$LOCALITÀ))
+barplot(table(dati$LOCALITA))
